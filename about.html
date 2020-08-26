@@ -1,0 +1,49 @@
+---
+layout: default
+robots: noindex
+---
+
+<p>Welcome!</p>
+
+<p>I am a methodologist with a decade of experience as a<a href="www.westat.com" title="link to Westat">&nbsp;government consultant</a> and<a href = "https://www.sowi.uni-mannheim.de/kreuter/" title= "link to Universität Mannheim">&nbsp;academic researcher</a>. </p>
+
+<p>My research interests include:</p>
+
+<table>
+<colgroup>
+<col width="15%" />
+<col width="35%" />
+<col width="15%" />
+<col width="35%" />
+</colgroup>
+<tbody>
+<tr>
+<td> <i class="fas fa-bomb"> </i> <i class="fas fa-user-injured"></i> <i class="fas fa-user-slash"></i><i class="far fa-angry"></i></td>
+<td>Violence and discrimination</td>
+<td><i class="fas fa-balance-scale"></i> <i class="fas fa-universal-access"></i> <i class="fas fa-search"></i> <i class="fas fa-file-signature"></i></td>
+<td>Research ethics</td>
+</tr>
+<tr>
+<td><i class="fas fa-globe-europe"></i>  <i class="fas fa-hand-holding-heart"></i> <i class="fas fa-hands-helping"></i><i class="fas fa-balance-scale-left"></i></td>
+<td>Vulnerable populations</td>
+<td><i class="fas fa-question"></i> <i class="fas fa-tasks"></i> <i class="fas fa-align-left"></i> <i class="fas fa-phone"></i></td>
+<td>Questionnaire design</td>
+</tr>
+<tr>
+<td><i class="fas fa-heart-broken"></i> <i class="fas fa-users"></i> <i class="far fa-sad-tear"></i> <i class="fas fa-hands"> </i></td>
+<td>Individual and collective trauma</td>
+<td><i class="fas fa-sms"></i> <i class="fas fa-vote-yea"></i> <i class="fas fa-laptop-code"></i> <i class="fas fa-mobile-alt"></i></td>
+<td>Innovations in data collection</td>
+</tr>
+</tbody>
+</table>
+
+<p>More information is available on my Research page. I also occasionally post news here and on<a href = "https://twitter.com/MMcKone" title= "link to @mmckone">&nbsp;Twitter</a>.</p>
+
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

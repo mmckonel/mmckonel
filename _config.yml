@@ -1,24 +1,37 @@
 # Site settings
-title: Thomas Zühlke
+title: Mariel McKone Leonard
 description: 'Business Card Page'
-url: 'http://thomas.zuehlke.family'
+url: 'https://github.com/mmckonel/mmckonel.git'
 baseurl: ''
-profilepic: '/images/tzuehlke.jpg'
-bkimage: '/images/bk1.jpg'
+profilepic: '/images/SocMediapic copy.jpg'
+bkimage: '/images/DissCoverpic2.jpg'
 google_analytics: UA-XXXXXX-X
-font_awesome: 'XXXXXXXXXX.js'
+font_awesome: 'font-awesome.js'
 
 author:
-  name: 'Thomas Zühlke'
-  email: info@thomas-zuehlke.de
-  twitter_username: thomzuehlke
+  name: 'Mariel McKone Leonard'
+  orcid_username:  0000-0001-5321-8749
+  googlescholar_username: ARmV_8cAAAAJ&hl=en
+  researchgate_username:  Mariel_Leonard
+  github_username:  mmckonel
+  twitter_username: mmckone
+  email: m.mckone.leonard@mmckone.com
 #  facebook_username: joshgerdes
-  github_username:  tzuehlke
-  linkedin_username:  thomas-zühlke-889182165
-  meetup_name: Azure-Meetup-Rostock-MV
+#  linkedin_username:  thomas-zühlke-889182165
+#  meetup_name: Azure-Meetup-Rostock-MV
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
 
 # Build settings
 destination: _site
+paginate: 10
+permalink: /:year/:title/
 markdown: kramdown
 highlighter: rouge
 
@@ -32,5 +45,5 @@ kramdown:
   # do not replace newlines by <br>s
   hard_wrap: false
 
-#plugins: ['jekyll-paginate']
+gems: ['jekyll-paginate']
 exclude: ['README.md', 'screenshot-overview.png']

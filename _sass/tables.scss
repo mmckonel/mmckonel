@@ -13,7 +13,7 @@ table {
 	}
 
 	tr {
-		&:nth-child(even) td {
+		&:nth-child(odd) td {
 			background: #eee;
 		}
 

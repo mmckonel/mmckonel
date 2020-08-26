@@ -13,47 +13,75 @@
           <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
         </a>
         <hr class="panel-cover__divider">
-        <p class="panel-cover__description">Working at <a href="https://www.arvato-systems.de">Arvato Systems</a> as developer and architect for Azure <i class="fas fa-cloud"></i>.</p>
+        <p class="panel-cover__description">Dr. rer. soc.</p>
+        <p class="panel-cover__description">
+                  <i class="fa fa-fw fa-map-marker"></i>Mannheim, DE</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary">
 
         <div class="navigation-wrapper">
 
+ <nav class="cover-navigation navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="{{ site.baseurl }}/about" title="link to About"><i class="far fa-user"></i>&nbsp;About</a></li>
+              </ul>
+          </nav>
+          
+              <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="{{ site.baseurl }}/projects" title="link to Research" class="panel-button projects-button"><i class="far fa-file-alt"></i>&nbsp;Research</a></li>
+              </ul>
+          </nav>
+          
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="{{ site.baseurl }}/teaching" title="link to Teaching" class="panel-button projects-button"><i class="fas fa-chalkboard-teacher"></i>&nbsp;Teaching</a></li>
+              </ul>
+          </nav>
+          
+              <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+              <li class="navigation__item"><a href="{{ site.baseurl }}/cv" title="link to CV"><i class="far fa-address-card"></i>&nbsp;CV</a></li>
+            </ul>
+          </nav>
+           <p></p>
+           
           <nav class="cover-navigation navigation--social">
             <ul class="navigation">
 
-            {% if site.author.twitter_username %}
-              <!-- Twitter -->
+            {% if site.author.orcid_username %}
+              <!-- ORCID -->
               <li class="navigation__item">
-                <a href="http://twitter.com/{{ site.author.twitter_username }}" title="@{{ site.author.twitter_username }} on Twitter" target="_blank">
-                  <!--<i class="icon icon-social-twitter"></i>-->
-                  <i class="fab fa-twitter fa-lg"></i>
-                  <span class="label">Twitter</span>
+                <a href="https://orcid.org/{{ site.author.orcid_username }}" title="{{ ite.author.orcid_username }} ORCID" target="_blank">
+                  <!--<i class="icon fa-orcid"></i>-->
+                  <i class="fab fa-orcid"></i>
+                  <span class="label">ORCID</span>
                 </a>
               </li>
             {% endif %}
 
-            {% if site.author.facebook_username %}
-              <!-- Facebook -->
+{% if site.author.googlescholar_username %}
+              <!-- Google Scholar -->
               <li class="navigation__item">
-                <a href="http://fb.me/{{ site.author.facebook_username }}" title="{{ site.author.facebook_username }} on Facebook" target="_blank">
-                  <i class="icon icon-social-facebook"></i>
-                  <span class="label">Facebook</span>
+                <a href="https://scholar.google.com/citations?user={{ site.author.googlescholar_username }}" title="{{ site.author.googlescholar_username }} on Google Scholar" target="_blank">
+                  <!--<i class="icon fa-graduation-cap"></i>-->
+                  <i class="fas fa-graduation-cap"></i>
+                  <span class="label">Google Scholar</span>
                 </a>
               </li>
             {% endif %}
 
-            {% if site.author.linkedin_username %}
-              <!-- LinkedIn -->
+{% if site.author.researchgate_username %}
+              <!-- ResearchGate -->
               <li class="navigation__item">
-                <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}" title="{{ site.author.linkedin_username }} on LinkedIn" target="_blank">
-                  <!--<i class="icon icon-social-linkedin"></i>-->
-                  <i class="fab fa-linkedin fa-lg"></i>
-                  <span class="label">LinkedIn</span>
+                <a href="https://www.researchgate.net/profile/{{ site.author.researchgate_username }}" title="{{ site.author.researchgate_username }} on ResearchGate" target="_blank">
+                  <!--<i class="icon fa-researchgate"></i>-->
+                 <i class="fab fa-researchgate"></i>
+                  <span class="label">ResearchGate</span>
                 </a>
               </li>
             {% endif %}
 
-            {% if site.author.github_username %}
+{% if site.author.github_username %}
               <!-- GitHub -->
               <li class="navigation__item">
                 <a href="https://www.github.com/{{ site.author.github_username }}" title="{{ site.author.github_username }} on GitHub" target="_blank">
@@ -64,18 +92,18 @@
               </li>
             {% endif %}
 
-            {% if site.author.meetup_name %}
-            <!-- Meetup -->
-            <li class="navigation__item">
-              <a href="https://www.meetup.com/{{ site.author.meetup_name }}" title="Meetup {{ site.author.meetup_name }}" target="_blank">
-                <!--<div style="font-size: 1.4rem;"><i class="fab fa-meetup fa-lg"></i></div>-->
-                <i class="fab fa-meetup fa-lg"></i>
-                <span class="label">Meetup</span>
-              </a>
-            </li>
+{% if site.author.twitter_username %}
+              <!-- Twitter -->
+              <li class="navigation__item">
+                <a href="http://twitter.com/{{ site.author.twitter_username }}" title="@{{ site.author.twitter_username }} on Twitter" target="_blank">
+                  <!--<i class="icon icon-social-twitter"></i>-->
+                  <i class="fab fa-twitter fa-lg"></i>
+                  <span class="label">Twitter</span>
+                </a>
+              </li>
             {% endif %}
 
-            {% if site.author.email %}
+{% if site.author.email %}
               <!-- Email -->
               <li class="navigation__item">
                 <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
@@ -86,15 +114,6 @@
               </li>
             {% endif %}
 
-            </ul>
-          </nav>
-          
-          <!--<nav class="cover-navigation cover-navigation--primary">-->
-          <nav class="cover-navigation navigation--social">
-            <ul class="navigation">
-              <li class="navigation__item"><a href="https://www.thomas-zuehlke.de" title="link to Blog"><i class="fas fa-link fa-lg"></i>&nbsp;Blog</a></li>
-              <!--<li class="navigation__item"><a href="{{ site.baseurl }}/#" title="link to Tweets" class="panel-button"><i class="icon icon-social-twitter"></i>&nbsp;Tweets</a></li>-->
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#projects" title="link to Tweets" class="panel-button projects-button"><i class="fas fa-file-code fa-lg"></i>&nbsp;Projects</a></li>
             </ul>
           </nav>
 
